@@ -26,6 +26,7 @@ $(document).ready(function () {
                     ).then(result => {
                         $('#request').hide();
                         $('#response').show();
+                        console.log(result);
                         $('#result').html('TX id: '+result.id);
                     }).catch(err => {
                         console.error(err);
