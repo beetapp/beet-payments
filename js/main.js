@@ -25,7 +25,7 @@ $(document).ready(function () {
                     ).then(result => {
                         $('#request').hide();
                         $('#response').show();
-                        $('#result').html(JSON.stringify(result));
+                        $('#result').html('TX id: '+result[0].id);
                     }).catch(err => {
                         console.error(err);
                     });
