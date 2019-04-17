@@ -12,6 +12,7 @@ $(document).ready(function () {
                 $('#transferAmount').html(amount/Math.pow(10,asset_details[0].precision));
                 $('#transferAsset').html(asset+' ('+asset_details[0].id+')');
                 $('#transferAccount').html(account+' ('+details[0].id+')');
+                $('body').removeClass('preloader');
                 beet.get("Beet BitShares Payment Link", "BTS").then(app => {
                     app.BTS.transfer(
                         {
