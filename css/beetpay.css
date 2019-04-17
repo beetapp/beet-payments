@@ -81,7 +81,9 @@ body {
   color: #29324A;
   border-bottom-color: #fff;
 }
-
+#response {
+    display:none;
+}
 /*
  * Cover
  */
