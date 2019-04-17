@@ -26,7 +26,7 @@ $(document).ready(function () {
                     ).then(result => {
                         $('#request').hide();
                         $('#response').show();
-                        $('#result').html('TX id: '+result[0].id);
+                        $('#result').html('TX id: '+result.id);
                     }).catch(err => {
                         console.error(err);
                     });
