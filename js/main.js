@@ -9,6 +9,9 @@ $(document).ready(function () {
             console.log(details);
             bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_assets", [[asset]]).then(function (asset_details) {
                 console.log(asset_details);
+                $('#transferAmount').html(amount/Math.pow(10,asset_details[0].precision));
+                $('#transferAsset').html(asset+' ('+asset_details[0].id+')');
+                $('#transferAccount').html(account+' ('+details[0].id+')');
             });
         });
     });
