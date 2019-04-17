@@ -7,6 +7,9 @@ $(document).ready(function () {
     bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true).init_promise.then(function (res) {
         bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_accounts", [[params[2]]]).then(function (account) {
             console.log(account);
+            bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_assets", [[params[1]]]).then(function (asset) {
+                console.log(asset);
+            });
         });
     });
 });
